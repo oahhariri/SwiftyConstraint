@@ -6,7 +6,7 @@ import UIKit
 public enum SwiftyConstraintAnimated {
     case constraint(_ with:NSLayoutConstraint)
     
-    func animate(constant: CGFloat) {
+    public func animate(constant: CGFloat) {
         switch self {
         case .constraint(let constraines):
             constraines.constant = constant
