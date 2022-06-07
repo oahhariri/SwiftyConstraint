@@ -62,9 +62,9 @@ public enum ViewConstraint {
     
 }
 
-extension UIView {
+public extension UIView {
 
-    public func anchor(_ constraines : ViewConstraint) -> SwiftyConstraintAnimated? {
+    func anchor(_ constraines : ViewConstraint) -> SwiftyConstraintAnimated? {
         
         
         guard constraines.isPredifinded else {return nil}
@@ -76,7 +76,7 @@ extension UIView {
       
     }
     
-    public func anchor(_ constraines : [ViewConstraint]) {
+    func anchor(_ constraines : [ViewConstraint]) {
         
         translatesAutoresizingMaskIntoConstraints = false
         
