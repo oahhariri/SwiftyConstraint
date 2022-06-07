@@ -3,7 +3,7 @@
 import UIKit
 
 
-enum SwiftyConstraintAnimated {
+public enum SwiftyConstraintAnimated {
     case constraint(_ with:NSLayoutConstraint)
     
     func animate(constant: CGFloat) {
@@ -14,12 +14,12 @@ enum SwiftyConstraintAnimated {
     }
 }
 
-enum  SwiftyConstraintOption {
+public enum SwiftyConstraintOption {
     case constant(_ value: CGFloat)
     case multiplier(_ value: CGFloat)
 }
 
- enum ViewConstraint {
+public enum ViewConstraint {
      
      case top(_ with:NSLayoutYAxisAnchor,_ padding:CGFloat = 0)
      case leading(_ with:NSLayoutXAxisAnchor,_ padding:CGFloat? = 0)
@@ -51,7 +51,7 @@ enum  SwiftyConstraintOption {
      case heightGreaterOrEqualToConstant(_ constant:CGFloat)
      case heightLessOrEqualToConstant(_ constant:CGFloat)
      
-    var isPredifinded: Bool {
+     var isPredifinded: Bool {
         switch self {
         case .fill, .fillX, .fillY, .center, .size:
             return false
@@ -64,7 +64,7 @@ enum  SwiftyConstraintOption {
 
 extension UIView {
 
-    func anchor(_ constraines : ViewConstraint) -> SwiftyConstraintAnimated? {
+    public func anchor(_ constraines : ViewConstraint) -> SwiftyConstraintAnimated? {
         
         
         guard constraines.isPredifinded else {return nil}
@@ -76,7 +76,7 @@ extension UIView {
       
     }
     
-    func anchor(_ constraines : [ViewConstraint]) {
+    public func anchor(_ constraines : [ViewConstraint]) {
         
         translatesAutoresizingMaskIntoConstraints = false
         
