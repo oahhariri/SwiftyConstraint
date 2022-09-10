@@ -10,7 +10,7 @@ import UIKit
 /// keep reference of constriens
 public struct SwiftyConstraintAnimated {
     let id: String
-    init (_ id: String) {
+    public init (_ id: String) {
         self.id = id
     }
 }
