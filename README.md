@@ -1,6 +1,6 @@
 # SwiftyConstraint
 
-easy to use Constraint for UIKit view
+write AutoLayout constraints with short code 
 
 ## Setup
 * SPM 
